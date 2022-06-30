@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <title>Atividade 06</title>
+    
+</head>
+
+<body>
+
+    <div>
+        <h1><strong>Preencha o formulário:</strong></h1>
+    </div>
+
+    <form>
+
+        
+        <fieldset method="post" url="/clientes" type="submit">
+            <legend>Cadastro de Clientes</legend>
+            <div>
+                <label><strong>Nome:</strong></label>
+                <input type="text" name="nome" id="nome" required>
+            </div>
+            <br>
+            <div>
+                <label><strong>Sobrenome:</strong></label>
+                <input type="text" name="sobrenome" id="sobrenome" required>
+            </div>
+            <br>
+        <div>
+            <label><strong>Email:</strong></label>
+            <input type="email" name="email" id="email" required>
+        </div>
+        <br>
+        <div>
+            <label><strong>Endereço:</strong></label>
+            <input type="text" name="endereço" id="endereço" required>
+        </div>
+        <br>
+        <div>
+            <label><strong>Qual seu gênero?</strong></label>
+            <label>
+                <input type="radio" name="genero" value="masculino">Masculino
+            </label>
+            <label>
+                <input type="radio" name="genero" value="fêminino">Fêminino
+            </label>
+        </div>
+        <br>
+        <div>
+            <input type="checkbox" name="not" value="desejarecebernoticias"><strong>Deseja receber noticias?</strong>
+        </div>
+        <br>
+
+        <button type="submit">Concluído</button>
+        <button type="reset">Cancelar</button>
+    </fieldset>
+    </form>
+
+</body>
+
+
+</html>
