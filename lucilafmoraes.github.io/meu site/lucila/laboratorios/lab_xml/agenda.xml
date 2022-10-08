@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<agenda>
+<contato>
+<nome>Bom dia e cia</nome>
+<endereco>São Paulo</endereco>
+<numero>(11)4002-8922</numero>
+<trabalho>SBT</trabalho>
+</contato>
+<contato>
+<nome>Lucila</nome>
+<endereco>Nova Friburgo</endereco>
+<numero>(22)1122-3344</numero>
+<trabalho>Cefet-RJ</trabalho>
+</contato>
+<contato>
+<Nome>Programa da Fatima Bernardes</Nome>
+<endereco>Rio de Janeiro-RJ</endereco>
+<numero>(21)99103-4000</numero>
+<empresa>Globo</empresa>
+</contato>
+</agenda>
