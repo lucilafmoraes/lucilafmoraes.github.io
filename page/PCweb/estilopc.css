@@ -1,0 +1,14 @@
+body{
+    background-color:bisque;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+#LAB{
+    
+    background-color:bisque;
+    width: 240px;
+    height: 95px;
+    margin: 50px;
+    text-align: center;
+    font-size: 1.1em;
+}
