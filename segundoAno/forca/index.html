@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+ <head>
+ <meta charset="utf-8">
+ <title>Jogo da Forca</title>
+ <link href="css/estilo.css" rel="stylesheet">
+ <script src="script/palavras.js" defer></script>
+ <script src="script/jogo.js" defer></script>
+<!--
+Baseado no programa de Matheus Franco
+-->
+ 
+</head>
+<body>
+<div id="jogo" class="corpo">
+ <div class="alinhar">
+ <label class="rotulo">Escolher categoria:</label>
+ <span id="perguntaAtual" class="pergunta">
+ <select id="categoria">
+ <option value="cidades">Cidades</option>
+ <option value="frutas">Frutas</option>
+ </select>
+ <button id="btnEscolherCategoria">Escolher</button>
+ </span>
+ </div>
+ <div class="alinhar">
+ <span id="mensagem" class="msg"></span>
+ </div>
+ <div class="parteEscrito">
+ 
+ <span id="faseAtual" class="desabilitado"></span>
+ 
+ <span id="numTentativas" class="desabilitado"></span>
+ 
+ <div id="perguntas">
+ <div class="preenchimento">
+ <label class="rotulo">Letra: </label>
+ <input id="entradaLetra" type="text" class="entrada" size="1" maxlength="1" title="Informe uma letra" />
+ <button id="bntTentar" class="bnt" type="button" value="Tentar!" title="Clique aqui para usar sua letra">Tentar!</button>
+ <br />
+ <label class="rotulo">Resposta: </label>
+ <input id="entradaResposta" type="text" class="entrada" title="Informe a resposta" />
+ <button id="bntResponder" class="bnt" type="button" value="Responder!" title="Clique aqui para responder">Responder!</button>
+ <br />
+ 
+ <ul class="painel"></ul>
+ 
+ <div id="palavra" class="letras">
+ <span id="letraEscolhida"></span>
+ <br />
+ <span id="letraErrada"></span>
+ <br />
+ <span id="respostaInformada"></span>
+ <br />
+ <span id="resposta"></span>
+ <br />
+ 
+ <button id="bntNovoJogo" class="bnt proximo" type="button" value="Próxima Pergunta" title="Clique aqui para avançar a fase">Próxima pergunta</button>
+ 
+ </div>
+ 
+ </div>
+ </div>
+ </div>
+ <div id="forca" class="desenho"></div>
+</div>
+</body>
+</html>

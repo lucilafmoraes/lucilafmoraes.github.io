@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Receitas</h1>
+    <div id="receitas"></div>
+</body>
+<script>
+    const carregaReceita = prato => {
+        let resp = `<div class="receita">s
+            <h1>${prato.nome}</h1></div>`
+    const divResp = document.querySelector("#receitas")
+    divResp.innerHTML += resp
+    }
+    const xhttp = new XMLHttpRequest()
+    const url = "https://rafaelescalfoni.github.io/desenv_web/receitas.json"
+
+    xhttp.open("get", url)
+    xhttp.send()
+    xhttp.onreadystatechange = function() {
+        if(this.readyState == 4){
+            if(this.status == 200) {
+                //baixar receitas
+                let resposta = this.responseText //pega oq ta escrito no site e poe em formato de texto(pode ser xml)
+                let receitas = JSON.parse (resposta) //json.parse pega o texto e pem em um array
+                //iterar o array
+                receitas.forEach(receita => {
+                    //carregar as receitas
+                    carregaReceita(receita)
+
+                });
+            } else{
+                //deu ruim! :(
+            }
+        }
+    }
+</script>
+</html>

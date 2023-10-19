@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão  1</title>
+</head>
+<body>
+    <h1>LABORATÓRIO</h1>
+    <hr>
+    <br>
+    <h2>Atividade 1: Manipulação de Arrays e Objetos</h2>
+    <p><b>Problema</b>: Imagine que você está desenvolvendo um sistema de gerenciamento de estoque. Você 
+        recebeu  um  array  de  objetos  que  representam  produtos  em  estoque.  Cada  objeto  possui 
+        propriedades como nome, preço e quantidade em estoque. Sua tarefa é escrever uma função que 
+        calcule o valor total do estoque.</p>
+    <h4>ACESSE "INSPECIONAR" E CONFIRA O CONSOLE</h4>
+    <hr>
+    <br>
+
+
+    <h2>Atividade 2: Trabalhando com Funções e Promisses</h2>
+    <p><b>Problema:</b>Você está desenvolvendo um aplicativo de previsão do tempo. Crie uma função que 
+        utilize a Fetch API para buscar dados de previsão do tempo de um serviço da web. A função deve 
+        retornar uma Promise com os dados da previsão.</p>
+        <h1>Previsão do Tempo</h1> 
+        <input type="text" id="cidade" placeholder="Digite o nome da cidade"> 
+        <button id="buscar">Buscar</button> 
+        <div id="resultado"> 
+            <!-- Os resultados serão exibidos aqui --> 
+        </div>
+    <script>
+        //QUESTÃO 1
+            const produtos = [ 
+        { nome: 'Laptop', preco: 1000, quantidade: 5 }, 
+        { nome: 'Mouse', preco: 20, quantidade: 10 }, 
+        { nome: 'Teclado', preco: 30, quantidade: 8 } 
+        ]; 
+        
+            const calcularValorTotalEstoque = produtos => { 
+            // Sua implementação aqui
+
+            const initialValue = 0;
+            const estoque = produtos.reduce((soma, valorAtual) => soma + valorAtual.quantidade, initialValue)
+            return estoque
+
+            }
+        const valorTotal = calcularValorTotalEstoque(produtos); 
+        console.log('Valor total do estoque:', valorTotal); 
+
+        //QUESTÃO 2
+
+        const buscarPrevisaoTempo = cidade => { 
+        // Sua implementação aqui usando a Fetch API 
+        const button = document.querySelector("#buscar")
+        button.addEventListener("click", () => function () {
+            const cidade = document.querySelector("#cidade")
+            const resultado = document.querySelector("#resultado")
+            fetch('https://github.com/adinan-cenci/climatempo-api/{$cidade.value}')
+            
+            
+            
+            })
+
+        } 
+ 
+        buscarPrevisaoTempo('São Paulo')
+
+    .then((dados) => { 
+        console.log('Dados da previsão do tempo:', dados); 
+    }) 
+    .catch((erro) => { 
+        console.error('Erro ao buscar previsão do tempo:', erro); 
+    }); 
+    
+    document.addEventListener('DOMContentLoaded', function () { 
+    // Seu código aqui 
+    }); 
+
+
+    </script>
+</body>
+</html>

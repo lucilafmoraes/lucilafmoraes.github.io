@@ -1,0 +1,11 @@
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: rgb(233,135,192);
+}
+main{
+    text-align: center;
+}
+footer{
+    background-color: black;
+    color: white;
+}
