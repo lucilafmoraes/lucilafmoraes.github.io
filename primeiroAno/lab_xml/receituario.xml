@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<receituario>
+<paciente>
+<nome>Ana Maria</nome>
+<idade>7 anos</idade>
+</paciente>
+<tratamento>
+<remedio>Xarope</remedio>
+<sintomas>Sem tosse</sintomas>
+<uso>Uso interno</uso>
+<quantidade>1 colher</quantidade>
+<doses>3x ao dia</doses>
+</tratamento>
+<segundoremedio>
+<remedio2>Gyellow</remedio2>
+<uso>Uso externo</uso>
+<usar>aplicar no braço 1x ao dia ao deitar</usar>
+</segundoremedio>
+</receituario>

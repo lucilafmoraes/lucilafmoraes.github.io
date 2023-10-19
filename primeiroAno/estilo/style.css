@@ -1,0 +1,10 @@
+body{
+   font-family: Verdana, Geneva, Tahoma, sans-serif; 
+   text-align: center;
+    background: linear-gradient(141deg, rgba(243,52,162,1) 0%, rgba(40,23,40,1) 71%);
+
+}
+footer{
+    background-color: black;
+    color: white;
+}
