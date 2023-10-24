@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restaurant</title>
+    <script src="./main.js" defer></script>
+    <link href="./style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <header>
+      <p><b>RESTAURANTE DA LU</b></p>
+      <button onclick="openCart()" id="cart">
+        <img
+          src="https://cdn-icons-png.flaticon.com/512/1170/1170678.png "
+          alt="carrinho"
+          width="30"
+          height="30"
+        /><span id="cart-number">0</span>
+      </button>
+    </header>
+    <aside class="minicart">
+      <div class="close-container">
+        <button onclick="closeCart()" id="close-minicart">X</button>
+      </div>
+      <div id="cart-list"></div>
+      <div id="cart-description">
+        <p id="price-in-cart">Total sem taxa: $0</p>
+        <p id="tax-price">Taxa: $0</p>
+        <p id="price-in-cart-total">Total: $0</p>
+        <button>Comprar</button>
+      </div>
+    </aside>
+    <main>
+        <div id="menu-restaurant"></div>
+    </main>
+    <footer>
+        <p>Site desenvolvido por Lucila Moraes para a disciplina de Programação Cliente Web em 2023</p>
+    </footer>
+  </body>
+</html>

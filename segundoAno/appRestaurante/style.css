@@ -1,0 +1,196 @@
+body{
+    background: rgb(233,135,192);
+    background: linear-gradient(141deg, rgba(233,135,192,1) 0%, rgba(182,84,252,1) 91%); 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+
+
+header {
+  padding: 4px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  border-bottom: 1px solid #eee;
+}
+
+button {
+  cursor: pointer;
+}
+
+header p {
+  font-size: 18px;
+  color: #000;
+  font-weight: 500;
+}
+
+#cart {
+  border: none;
+  background-color: transparent;
+}
+
+.minicart {
+  position: fixed;
+  height: 100vh;
+  width: 300px;
+  top: 0;
+  right: 0;
+  transform: translateX(100%);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: spacex-evenly;
+
+  padding: 0 10px;
+
+  background-color: #fff;
+  border-left: 1px solid #eee;
+  transition: 0.25s ease-in-out;
+}
+
+.minicart.opened {
+  transform: translateX(0%);
+}
+
+#cart-list {
+  flex: 1;
+  overflow: auto;
+}
+
+.close-container {
+  display: flex;
+  align-items: end;
+  justify-content: end;
+  margin-bottom: 7px;
+  margin-top: 3px;
+
+  border-bottom: 1px solid #eee;
+}
+
+.close-container button {
+  border: none;
+  background-color: transparent;
+}
+
+#cart-description {
+  border-top: 1px solid #eee;
+}
+
+#cart-description button {
+  width: 100%;
+  padding: 10px;
+  background-color: #218821;
+
+  color: #fff;
+  font-weight: 600;
+
+  border: none;
+  border-radius: 4px;
+
+  margin-bottom: 4px;
+}
+
+.cart-container {
+  display: flex;
+
+  position: relative;
+}
+
+.cart-container + .cart-container {
+  margin-top: 10px;
+}
+
+.cart-container .description-cart {
+  width: calc(100% - 25px - 50%);
+  margin-right: 25px;
+  padding-left: 4px;
+}
+
+.price-quantity-div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cart-container .description-cart p:first-child {
+  margin: 0;
+}
+
+.delete-button {
+  position: absolute;
+  right: 0;
+
+  border: none;
+  background-color: transparent;
+}
+
+.cart-container img {
+  width: 75px;
+  height: 75px;
+}
+
+#menu-restaurant {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 10px;
+  gap: 10px;
+  justify-content: center;
+}
+
+.card {
+  max-width: 250px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.card img {
+  width: 100%;
+  height: 250px;
+  max-height: 250px;
+  aspect-ratio: 16 / 9;
+  max-width: 250px;
+}
+
+.details {
+  flex: 1;
+  color: #555;
+  font-size: 12px;
+}
+
+.card button {
+  width: 100%;
+  padding: 10px;
+  background-color: #218821;
+
+  color: #fff;
+  font-weight: 600;
+
+  border: none;
+  border-radius: 4px;
+
+  margin-bottom: 4px;
+}
+
+#cart {
+  position: relative;
+}
+
+#cart-number {
+  position: absolute;
+  padding: 4px;
+  min-width: 15px;
+  min-height: 15px;
+  top: 0;
+  right: 0;
+  transform: translate(50%, -50%);
+  background-color: #218821;
+  color: #fff;
+  border-radius: 50px;
+}
+footer{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: black;
+  color: white;
+}
