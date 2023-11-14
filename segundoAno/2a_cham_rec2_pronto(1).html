@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title>2ª chamada - Recuperação 2 de PCWeb</title>
+	<style type="text/css">
+		* {
+			font-family: Roboto, Helvetica, sans-serif;
+		}
+		body {
+			background-color: #ddd;
+		}
+
+		header, main {
+			width: 900px;
+			margin: 0 auto;
+			background-color: #fff;
+			box-shadow: 3px 5px 2px #ccc;
+			padding: 20px 10px;
+
+		}
+
+		main {
+			min-height: 80vh;
+		}
+		header {border-radius: 15px 15px 0px 0;}
+		header img {
+			width: 200px;
+			height: 150px;
+			float:left;
+			margin-right:25px
+		}
+		header h1 {
+			font-size: 1.5em;
+			margin: 0;
+		}
+		header h3 {
+			margin: 5px 0 10px;
+			font-style: italic;
+			font-weight: normal;
+			font-size: 1.1em;
+		}
+		header h4 {
+			margin:5px 0;
+			font-weight: normal;
+			font-size: 0.8em;
+		}
+		main h4{
+			text-align: center;
+		}
+		main >	p {
+			font-size:0.9em;
+			margin-left: 15px;	
+		}
+		main li {
+			margin-bottom: 20px;
+			margin-right: 15px;
+			line-height: 1.5em;
+		}
+		article {
+			background-color: #ddd;
+			font-size: 0.8em;
+			box-sizing: border-box;
+			padding: 5px 10px;
+			line-height: 1.2em;	
+		}
+		.destaque {
+			background-color: #ff0;
+			padding: 2px;
+			font-weight: bold;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<img src="data:image/png;base64,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">
+		<h1>Centro Federal de Educação Tecnológica do Rio de Janeiro - Celso Suckow da Fonseca</h1>
+		<h3>Campus Nova Friburgo</h3>
+		<h4>Curso Médio Integrado ao Técnico em Informática</h4>
+		<h4>Professor Rafael Escalfoni</h4>
+	</header>
+	<main>
+		<h4>Programação de Clientes Web - Prova Prática</h4>
+		<p>
+			Leia os enunciados das questões com atenção. Responda à tarefa completando este arquivo. 
+		</p>
+		<p>
+			Não altere o nome das variáveis no seu script. Seu script será testado nesta página, sem adaptações.
+		</p>
+
+		<p>
+			Boa sorte!
+		</p>
+	
+		<ol>
+			<li>
+				Faça um programa que leia uma frase e retorne o número de vogais encontradas.
+
+				<fieldset>
+					<legend>Questão 1</legend>
+					<p>
+						<label for="q1_frase">Frase</label>
+                        <br>
+						<textarea id="q1_frase"></textarea>
+						<br>
+						<button id="q1_executa">Executar</button>
+					</p>
+					<p id="q1_resposta"></p>
+				</fieldset>
+			</li>
+			<li>
+				Faça um programa que conte a ocorrência das palavras a uma frase.
+
+				<fieldset>
+					<legend>Questão 2</legend>
+					<p>
+						<label for="q2_frase">Frase</label>
+                        <textarea id="q2_frase"></textarea>
+                        <br>
+						<input type="text" id="q2_palavra" placeholder="Pesquisar palavra">
+						<button id="q2_executa">Pesquisar</button>
+					</p>
+					<p id="q2_resposta"></p>
+					
+				</fieldset>
+			</li>
+
+            <li>
+                <p>
+                Faça um programa que dado o texto da questão, e uma entrada de texto, ao pressionar o botão Pesquisar, destaque as ocorrências com cor de fundo amarelo. Para isto, utilize &lt;span class="destaque"&gt; no entorno das ocorrências. Caso a entrada de texto não exista no texto da questão, exiba uma mensagem indicando que a busca não retornou nenhum resultado.
+                </p>
+                <p>
+                Em seguida, implemente um programa que permita substituir palavras em uma frase.
+                </p>
+            
+                <fieldset>
+					<legend>Questão 3</legend>
+					<article id="questao3_texto">
+						<p>
+							JavaScript (frequentemente abreviado como JS) é uma linguagem de programação interpretada estruturada, de script em alto nível com tipagem dinâmica fraca e multiparadigma (protótipos, orientado a objeto, imperativo e, funcional). Juntamente com HTML e CSS, o JavaScript é uma das três principais tecnologias da World Wide Web. JavaScript permite páginas da Web interativas e, portanto, é uma parte essencial dos aplicativos da web. A grande maioria dos sites usa, e todos os principais navegadores têm um mecanismo JavaScript dedicado para executá-lo.
+						</p>
+						<p>
+							É atualmente a principal linguagem para programação client-side em navegadores web. É também bastante utilizada do lado do servidor através de ambientes como o node.js.
+						</p>
+						<p>
+							Como uma linguagem multiparadigma, o JavaScript suporta estilos de programação orientados a eventos, funcionais e imperativos (incluindo orientado a objetos e prototype-based), apresentando recursos como fechamentos (closures) e funções de alta ordem comumente indisponíveis em linguagens populares como Java e C++. Possui APIs para trabalhar com texto, matrizes, datas, expressões regulares e o DOM, mas a linguagem em si não inclui nenhuma E/S, como instalações de rede, armazenamento ou gráficos, contando com isso no ambiente host em que está embutido.
+						</p>
+						<p>
+							Foi originalmente implementada como parte dos navegadores web para que scripts pudessem ser executados do lado do cliente e interagissem com o usuário sem a necessidade deste script passar pelo servidor, controlando o navegador, realizando comunicação assíncrona e alterando o conteúdo do documento exibido, porém os mecanismos JavaScript agora estão incorporados em muitos outros tipos de software host, incluindo servidores em servidores e bancos de dados da Web e em programas que não são da Web, como processadores de texto e PDF, e em tempo de execução ambientes que disponibilizam JavaScript para escrever aplicativos móveis e de desktop, incluindo widgets de área de trabalho.
+						</p>
+						<p>
+							Os termos Vanilla JavaScript e Vanilla JS se referem ao JavaScript não estendido por qualquer estrutura ou biblioteca adicional. Scripts escritos em Vanilla JS são códigos JavaScript simples.
+						</p>
+						<p>
+							Embora existam semelhanças entre JavaScript e Java, incluindo o nome da linguagem, a sintaxe e as respectivas bibliotecas padrão, as duas linguagens são distintas e diferem muito no design; JavaScript foi influenciado por linguagens de programação como Self e Scheme.
+						</p>
+						<p>
+							É baseada em ECMAScript, padronizada pela Ecma international nas especificações ECMA-262 e ISO/IEC 16262. 
+						</p>
+					</article>
+
+					<input type="text" id="q3_procurar"  placeholder="Procurar">
+                    <button id="q3_executa_procurar">Procurar</button>
+                    <input type="text" id="q3_substituir"  placeholder="Substituir por">
+					<button id="q3_executa">Substituir</button>
+
+				</fieldset>
+            </li>
+
+            <li>
+				Faça um programa que leia o sexo (M ou F) e a altura de pessoas, agrupe por sexo e calcule a média de altura. Não há um número exato de pessoas a ser digitado, logo o seu programa deve calcular as médias de altura de <strong>M</strong> e <strong>F</strong> na medida em que recebe dados das pessoas.
+
+				<fieldset>
+					<legend>Questão 4</legend>
+					<p>
+						<label for="q4_sexo">Sexo do Participante</label>
+						<select id="q4_sexo">
+							<option value="M">Masculino</option>
+							<option value="F">Feminino</option>
+						</select>
+						<br>
+						<label for="q4_altura">Altura (em metros)</label>
+						<input type="number" id="q4_altura" placeholder="Digite a altura">
+						<br>
+						<button id="q4_executa">Adicionar</button>
+					</p>
+					<p id="q4_resposta"></p>
+
+			</li>
+			<li>
+				Faça um programa que dado um número inteiro N digitado pelo usuário, o programa indique o n-ésimo primo. Por exemplo: se N=3, o primo correspondente será 5 (2 é o 1º, 3 é o 2º e 5 é o 3º).
+
+				<fieldset>
+					<legend>Questão 5</legend>
+					<p>
+						<input type="number" id="q5_inteiro" min="1"  placeholder="Digite um inteiro">
+						<button id="q5_executa">N-Ésimo Primo</button>
+					</p>
+					<p id="q5_resposta">
+						O 3º primo é 5. <em>&lt;&lt;Remova esta mensagem antes de inserir a sua!!!&gt;&gt;</em>
+					</p>
+				</fieldset>
+			</li>
+		</ol>
+	</main>
+
+	<script>
+		let bt_questao1 = document.getElementById("q1_executa");
+		let bt_questao2 = document.getElementById("q2_executa");
+		let bt_questao3 = document.getElementById("q3_executa");
+		let bt_questao4 = document.getElementById("q4_executa");
+		let bt_questao5 = document.getElementById("q5_executa");
+
+		let resposta1 = () => {
+			// resposta da questão 1 aqui.
+			let resultado = document.querySelector("#q1_resposta")
+			let frase1 = document.querySelector("#q1_frase").value
+			let qtdVogais = 0
+			const vogais = "aeiou"
+			//console.log(vogais.indexOf('frase'))
+			const fraseLista = frase1.split("")
+			fraseLista.forEach(letra =>{
+				if(vogais.indexOf(letra) != -1){
+					qtdVogais++
+				}
+			})
+			resultado.innerHTML = `Essa frase possui ${qtdVogais} vogais `		
+			
+		}
+
+		let resposta2 = () => {
+			// resposta da questão 2 aqui.
+			let frase = document.querySelector("#q2_frase").value
+			let palavra = document.querySelector("#q2_palavra").value
+			let regEx = new RegExp(`\\b${palavra}\\b`, "gi")
+			let vezes = frase.match(regEx)
+
+			if (vezes) {
+				document.querySelector("#q2_resposta").innerHTML = `A palavra "${palavra}" aparece ${vezes.length} vezes.`
+			} else {
+				document.querySelector("#q2_resposta").innerHTML = `A palavra "${palavra}" não foi encontrada na frase.`
+			}
+		
+		}
+
+		let resposta3 = () => {
+			// resposta da questão 3.
+		
+			let texto = document.querySelector("#questao3_texto").innerHTML
+			let palavraBuscada = document.querySelector("#q3_procurar").value
+			let regex = new RegExp(palavraBuscada, "gi")
+
+			if (palavraBuscada && palavraBuscada.trim() !== "") {
+				texto = texto.replace(regex, `<span class="destaque">$&</span>`)
+				document.querySelector("#questao3_texto").innerHTML = texto
+			} else {
+				alert("Insira a palavra a ser buscada")
+			}
+		}
+
+		let substituirPalavra = () => {
+			let texto = document.querySelector("#questao3_texto").innerHTML
+			let palavraAnterior = document.querySelector("#q3_procurar").value
+			let palavraNova = document.querySelector("#q3_substituir").value
+
+			let regex = new RegExp(palavraAnterior, "gi")
+
+			if (palavraAnterior && palavraAnterior.trim() !== "") {
+				texto = texto.replace(regex, palavraNova)
+				document.querySelector("#questao3_texto").innerHTML = texto
+			} else {
+				alert("Insira a paalavra a ser substituida")
+			}
+		}
+		document.querySelector("#q3_executa_procurar").addEventListener("click", resposta3, false)
+		document.querySelector("#q3_executa").addEventListener("click", substituirPalavra, false)
+
+
+		let resposta4 = () => {
+			// resposta da questão 4
+			let agrupamento = document.querySelector("#q4_resposta")
+			let sx = document.querySelector("#q4_sexo").value
+			let alt = parseFloat(document.querySelector("#q4_altura").value)
+
+			//Verifica se a entrada de altura é válida (se for um número positivo)
+			if (!isNaN(alt) && alt > 0) {
+				if (!agrupamento.querySelector("table")) {
+					agrupamento.innerHTML = `
+                <table>
+                    <tr>
+                        <th></th>
+                        <th>Homens</th>
+                        <th>Mulheres</th>
+                    </tr>
+                    <tr>
+                        <th>Participantes</th>
+                        <td id="homensCount">0</td>
+                        <td id="mulheresCount">0</td>
+                    </tr>
+                    <tr>
+                        <th>Altura Média</th>
+                        <td id="alturaMediaHomens"></td>
+                        <td id="alturaMediaMulheres"></td>
+                    </tr>
+                </table>
+            	`
+				}
+
+				let homens = document.querySelector("#homensCount")
+				let mulheres = document.querySelector("#mulheresCount")
+				let alturaMediaHomens = document.querySelector("#alturaMediaHomens")
+				let alturaMediaMulheres = document.querySelector("#alturaMediaMulheres")
+
+				// Adiciona ou atualiza a quantidade de participantes na tabela
+				let homensAtuais = parseInt(homens.innerHTML)
+				let mulheresAtuais = parseInt(mulheres.innerHTML)
+
+				homens.innerHTML = homensAtuais + (sx === "M" ? 1 : 0)
+				mulheres.innerHTML = mulheresAtuais + (sx === "F" ? 1 : 0)
+
+				let alturaMediaHomensAtuais = ((parseFloat(alturaMediaHomens.innerHTML) || 0) * homensAtuais + (sx === "M" ? alt : 0)) / (homensAtuais + (sx === "M" ? 1 : 0))
+				let alturaMediaMulheresAtuais = ((parseFloat(alturaMediaMulheres.innerHTML) || 0) * mulheresAtuais + (sx === "F" ? alt : 0)) / (mulheresAtuais + (sx === "F" ? 1 : 0))
+
+				alturaMediaHomens.innerHTML = alturaMediaHomensAtuais.toFixed(2)
+				alturaMediaMulheres.innerHTML = alturaMediaMulheresAtuais.toFixed(2)
+
+			} else {
+				alert("Insira uma altura verdadeira")
+			}
+		}
+
+		let resposta5 = () => {
+			// resposta da questão 5 aqui.
+			let numero = parseInt(document.querySelector("#q5_inteiro").value)
+
+			if (!isNaN(numero) && numero > 0) {
+				let count = 0
+				let element= 2
+
+				while (count < numero) {
+					if (isPrimo(element)) {
+						count++
+					}
+					element++
+				}
+
+				document.querySelector("#q5_resposta").innerText = `O ${numero}º primo é ${element - 1}`
+			} else {
+				alert("Insira outro número")
+			}
+		}
+
+		let isPrimo = (num) => {
+			for (let i = 2; i < num; i++) {
+				if (num % i === 0) {
+					return false
+				}
+			}
+			return num > 1
+		}
+		
+
+		//Atribuindo o evento click dos botões às funções acima
+		bt_questao1.addEventListener("click", resposta1, false)
+		bt_questao2.addEventListener("click", resposta2, false)
+		bt_questao3.addEventListener("click", resposta3, false)
+		bt_questao4.addEventListener("click", resposta4, false)
+		bt_questao5.addEventListener("click", resposta5, false)
+
+
+	</script>
+</body>
+</html>
