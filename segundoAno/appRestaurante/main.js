@@ -7,6 +7,8 @@
   let minicartDiv = document.querySelector(".minicart")
   let openedCart = false
   let menu = []
+  let btnMiniCart = document.querySelector("#comprar")
+  let btnConfirmacaoDeCompra = document.querySelector("#confirmar-compra")
 
   const url = 'https://rafaelescalfoni.github.io/desenv_web/restaurante/items.json';
 
@@ -84,18 +86,6 @@
     renderNewCart();
   }
 
-  setTimeout(() => {
-    removeOldItems();
-  }, 5 * 60 * 1000); // 5 minutes in milliseconds
-
-  function removeOldItems() {
-    const currentTime = Date.now();
-    cart = cart.filter((item) => {
-      const timeDifference = currentTime - item.timestamp;
-      // Remove items added more than 5 minutes ago
-      return timeDifference <= 5 * 60 * 1000; // 5 minutes in milliseconds
-    });
-  }
   function removeItemInCart(code) {
     const index = cart.findIndex((actual) => code === actual.code);
     if (index === -1) {
@@ -110,8 +100,6 @@
     saveCartToLocalStorage();
     renderNewCart();
   }
-
-  removeOldItems();
 
   function createCartItem({ name, price, photo, code, quantity }) {
     const cartContainerDiv = document.createElement("div");
@@ -191,15 +179,43 @@
 
     return cardDiv;
   }
+  const divConfirmarCompra = document.querySelector(".confirmar-compra")
+  btnMiniCart.addEventListener("click", () => {
+    //const divConfirmarCompra = document.querySelector(".confirmar-compra")
+    const listaConfirmarCompra = document.querySelector("#lista-de-confirmacao")
+    divConfirmarCompra.classList.add("show")
+    listaConfirmarCompra.innerHTML=""
+    cart.map((item) => {
+      listaConfirmarCompra.innerHTML += item.name 
+    })   
+  })
+  btnConfirmacaoDeCompra.addEventListener("click", () => {
+    divConfirmarCompra.innerHTML="Seu pedido foi enviado"
+    const btnCancelar = document.createElement("button")
+    btnCancelar.innerText = "CANCELAR"
+    let tempo = false
+    setTimeout( () =>  {
+      tempo = true
 
+    }, 5000 * 60)
+    divConfirmarCompra.appendChild(btnCancelar)
+    btnCancelar.onclick = () => {
+    if(tempo){
+      divConfirmarCompra.innerHTML="Desculpe, mas seu pedido já foi enviado para a cozinha"
+      console.log("abacate")
+    }
+    else{
+      divConfirmarCompra.innerHTML="Seu pedido foi cancelado"
+      console.log("morango")
+    }
+    }
+  })
     function makeMenu(menu) {
-    //const menuDiv = document.getElementById("menu-restaurant");
-    //menu = await requestMenu();
-
+    
     const menuDiv = document.getElementById("menu-restaurant");
     menu.forEach(({ photo, price, name, details, code }) => {
-      menuDiv.appendChild(createCard({ photo, price, name, details, code }));
-    });
+      menuDiv.appendChild(createCard({ photo, price, name, details, code }))
+    })
   }
 
   loadCartFromLocalStorage()

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Restaurant</title>
+    <title>Restaurante da Lu</title>
     <script src="./main.js" defer></script>
     <link href="./style.css" rel="stylesheet" type="text/css" />
   </head>
@@ -28,11 +28,16 @@
         <p id="price-in-cart">Total sem taxa: $0</p>
         <p id="tax-price">Taxa: $0</p>
         <p id="price-in-cart-total">Total: $0</p>
-        <button>Comprar</button>
+        <button id="comprar">Comprar</button>
       </div>
     </aside>
     <main>
         <div id="menu-restaurant"></div>
+        <div class="confirmar-compra">
+          <h3>Deseja confirmar seu pedido?</h3>
+          <ul id="lista-de-confirmacao"></ul>
+          <button id="confirmar-compra">CONFIRMAR</button>
+        </div>
     </main>
     <footer>
         <p>Site desenvolvido por Lucila Moraes para a disciplina de Programação Cliente Web em 2023</p>
